@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --color1: #FFF5E0;
+    --color2: #FF6969;
+    --color3: #C70039;
+    --color4: #141E46;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color1);
+    font-family: 'Gabarito', cursive;
+}
+
+.contenedor-editar{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor-formulario{
+    border-radius: 5px;
+    background-color: var(--color4);
+    width: auto;
+    display: inline-block;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.formulario-editar-clientes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+h1{
+    color: var(--color1);
+    text-align: center;
+}
+
+.formulario-editar-clientes label{
+    color: var(--color1);
+    font-size: 25px;
+}
+
+.formulario-editar-clientes .firstname-edit, .lastname-edit, .email-edit, .phone-edit{
+    width: 300px;
+    height: 25px;
+    margin: 15px 30px;
+    background-color: var(--color1);
+    border: none;
+    padding: 0 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btnEditar{
+    font-size: 25px;
+    width: 200px;
+    background-color: var(--color4);
+    color: var(--color1);
+    border: 1px solid var(--color1);
+    padding: 7px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Gabarito';
+    transition: all .5s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.btnEditar:hover{
+    color: var(--color4);
+    background-color: var(--color1);
+}
+
+.btnCancelar-edit{
+    font-size: 25px;
+    width: 160px;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: 1px solid var(--color2);
+    padding: 7px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Gabarito';
+    transition: all .5s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.btnCancelar-edit:hover{
+    color: var(--color2);
+    background-color: var(--color1);
+}

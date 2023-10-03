@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/table-editar.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor-editar">
+        <div class="contenedor-formulario">
+            <h1>Editar datos de Registro</h1>
+            <form class="formulario-editar-clientes">
+                <label for="firstname">Nombre:</label>
+                <input type="text" class="firstname-edit" name="firstname" required><br>
+
+                <label for="lastname">Apellido:</label>
+                <input type="text" class="lastname-edit" name="lastname" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" class="email-edit" name="email" required><br>
+
+                <label for="phone">Teléfono:</label>
+                <input type="number" class="phone-edit" name="phone" required><br>
+
+                <input type="submit" class="btnEditar"value="Editar">
+                <a href="table.html" class="btnCancelar-edit">Cancelar</a>
+            </form>
+        </div> 
+    </div>
+    <script src="../JS/table-editor.js"></script>
+</body>
+</html>

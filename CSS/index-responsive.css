@@ -1,0 +1,85 @@
+@media screen and (max-width:1380px) {
+    .contenedor-dinamico{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .contenedor-informacion{
+        flex: 1;
+        height: 100vh;
+        width: auto;
+        position: relative;
+    }
+    
+    .contenedor-form{
+        flex: 1;
+        height: 100vh;
+        width: auto;
+        position: relative;
+        background-color: var(--color4);
+        flex-direction: row;
+        justify-content: baseline;
+        align-items: baseline;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .titulo-h1{
+        font-weight: 500;
+        font-size: 30px;
+        bottom: 60px;
+    }
+    
+    .titulo-h2{
+        margin: 0;
+        font-size: 30px;
+        color: var(--color4)
+    }
+    
+    .subtitulo{
+        color: var(--color4);
+        position: relative;
+        bottom: 50px;
+    }
+    
+    .pie{
+        text-align: right;
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .springlogo{
+        width: auto;
+        height: 20px;
+        vertical-align: middle;
+    }
+
+    .btnSesion, .btnRegistrar{
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        height: 50px;
+        width: 100px;
+        border-radius: 70px;
+        margin-top: 40px;
+    }
+
+    .btnSesion{
+        color: var(--color4);
+        background-color: var(--color1);
+        border: 2px solid var(--color1);
+        transition: all 0.5s;
+    }
+    
+    
+    .btnRegistrar{
+        color: var(--color1);
+        background-color: var(--color4);
+        border: 2px solid var(--color1);
+        transition: all 0.5s;
+    }
+}

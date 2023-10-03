@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --color1: #FFF5E0;
+    --color2: #FF6969;
+    --color3: #C70039;
+    --color4: #141E46;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color1);
+    font-family: 'Gabarito', cursive;
+}
+
+nav{
+    display: flex;
+    background-color: var(--color4);
+    color: var(--color1);
+    width: auto;
+    height: 10vh;
+    font-size: 35px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.contenedor{
+    display: flex;
+    height: 90vh;
+}
+
+.contenedor-tabla{
+    flex: 1;
+}
+
+.contenedor-formulario{
+    flex: 1;
+}
+
+.tabla-clientes{
+    border-collapse: collapse;
+    margin: 50px 0 0 100px;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.tabla-clientes thead tr{
+    background-color: var(--color4);
+    color: var(--color1);
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabla-clientes th, 
+.tabla-clientes td{
+    padding: 12px 15px;
+}
+
+.tabla-clientes td{
+    color: var(--color4);
+}
+
+.tabla-clientes tbody tr{
+    border-bottom: 1px solid #1d2a61;
+}
+
+.tabla-clientes tbody tr:last-of-type{
+    border-bottom: 2px solid var(--color4);
+}
+
+.tabla-clientes tbody tr:active-row{
+    font-weight: bold;
+    color: var(--color2);
+}
+
+.btnEliminar{
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: var(--color3);
+    color: var(--color4);
+    text-decoration: none;
+    border: 1px solid var(--color3);
+    padding: 7px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Gabarito';
+    transition: all .5s ease-in-out;
+}
+
+.btnEliminar:hover{
+    background-color: var(--color1);
+    color: var(--color3);
+    transition: all .5s ease-in-out;
+}
+
+.btnEditar{
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: var(--color4);
+    color: var(--color1);
+    text-decoration: none;
+    border: 1px solid var(--color4);
+    padding: 7px 5px;
+    border-radius: 5px;
+    font-family: 'Gabarito';
+    transition: all .5s ease-in-out;
+}
+
+.btnEditar:hover{
+    background-color: var(--color1);
+    color: var(--color4);
+    transition: all .5s ease-in-out;
+}
+
+.contenedor-formulario-clientes{
+    margin: 50px 0 0 100px;
+    border-radius: 5px;
+    background-color: var(--color3);
+    width: auto;
+    display: inline-block;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.formulario-clientes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+.formulario-clientes p{
+    font-size: 30px;
+    text-align: center;
+    color: var(--color1);
+    font-weight: bold;
+}
+
+.formulario-clientes label{
+    color: var(--color1);
+    font-size: 25px;
+    display: block;
+}
+
+.formulario-clientes .firstname, .lastname, .email, .phone{
+    width: 300px;
+    height: 25px;
+    margin: 15px 30px;
+    background-color: var(--color1);
+    border: none;
+    padding: 0 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btnAgregar{
+    font-size: 25px;
+    width: 200px;
+    background-color: var(--color1);
+    color: var(--color3);
+    border: 1px solid var(--color3);
+    padding: 7px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Gabarito';
+    transition: all .5s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.btnAgregar:hover {
+    color: var(--color1);
+    background-color: var(--color3);
+    border: 1px solid var(--color1);
+    transition: all .5s ease-in-out;
+}
+
+.btnCerrarSesion{
+    color: var(--color1);
+    background-color: var(--color4);
+    border: 1px solid var(--color1);
+    border-radius: 10px;
+    position: absolute;
+    right: 1%;
+    height: 40px;
+    cursor: pointer;
+}

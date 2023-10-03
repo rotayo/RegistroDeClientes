@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+    <link rel="stylesheet" href="../CSS/table.css">
+</head>
+<body>
+    <nav>
+        <p class="titulo"></p>
+        <button onclick="salir()" class="btnCerrarSesion">Cerrar Sesion</button>
+    </nav>
+    <div class="contenedor">
+        <div class="contenedor-tabla">
+            <table class="tabla-clientes">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>APELLIDO</th>
+                        <th>EMAIL</th>
+                        <th>TELÉFONO</th>
+                        <th colspan="2">OPCIONES</th>
+                    </tr>
+                </thead>
+                <tbody class="tabla-contenido"></tbody>
+            </table>
+        </div>
+        <div class="contenedor-formulario">
+            <div class="contenedor-formulario-clientes">
+                <form class="formulario-clientes">
+                    <p>Nuevo Registro</p>
+                    <label for="firstname">Nombre:</label>
+                    <input type="text" class="firstname" name="firstname" required><br>
+            
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" class="lastname" name="lastname" required><br>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" class="email" name="email" required><br>
+            
+                    <label for="phone">Teléfono:</label>
+                    <input type="number" class="phone" name="phone" required><br>
+    
+                    <input type="submit" class="btnAgregar"value="Agregar">
+                </form>
+                <button>Descargar PDF</button>
+                <button>Descargar XML</button>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/table.js"></script>
+</body>
+</html>

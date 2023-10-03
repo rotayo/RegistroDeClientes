@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClentManager</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <div class="contenedor-dinamico">
+        <div class="contenedor-register">
+            <div class="contenedor-register-tarjeta">
+                <h1 class="titulo-register-h1">Regístrate</h1>
+                <form class="usuarioForm-register">
+                    <label for="firstname">Nombre:</label>
+                    <input type="text" class="firstnameInput-register" name="firstname" required><br>
+    
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" class="lastnameInput-register" name="lastname" required><br>
+    
+                    <label for="username">Correo:</label>
+                    <input type="email" class="usernameInput-register" name="username" required><br>
+    
+                    <label for="email">Contraseña:</label>
+                    <input type="password" class="passwordInput-register" name="password" required><br>
+    
+                    <label for="country">País:</label>
+                    <input type="country" class="countryInput-register" name="country" required><br>
+                    
+                    <p id="mensajeError-register">El correo ingresado ya está registrado</p>
+                    <input type="submit" class="btnRegistrar-register" value="Registrarse">
+                    <!-- <button onclick="register()"class="btnRegistrar-register">Registrarse</button> -->
+                </form>
+                <a href="../index.html" class="volver">Volver</a>
+            </div> 
+        </div> 
+    </div>
+    <script src="../JS/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --color1: #FFF5E0;
+    --color2: #FF6969;
+    --color3: #C70039;
+    --color4: #141E46;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color1);
+    font-family: 'Gabarito', cursive;
+}
+
+.contenedor-dinamico{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    height: 100vh;
+    width: auto;
+    position: relative;
+}
+
+.contenedor-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+    position: relative;
+    flex: 1;
+    background-color: var(--color4);
+}
+
+.usuarioForm{
+    width: 100%;
+    text-align: center;
+}
+
+.titulo-h1{
+    width: auto;
+    color: var(--color4);
+    font-weight: 500;
+    font-size: 75px;
+    margin: 0;
+    position: relative;
+    bottom: 60px;
+}
+
+.titulo-h2{
+    margin: 0;
+    font-size: 50px;
+    color: var(--color4)
+}
+
+.subtitulo{
+    color: var(--color4);
+    position: relative;
+    bottom: 50px;
+}
+
+.pie{
+    text-align: right;
+    margin: 0;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    width: 54%;
+    font-size: 25px;
+    color: var(--color4);
+}
+
+.emailLabel, .passwordLabel{
+    color: var(--color1);
+    font-size: 35px;
+    display: block;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.passwordLabel{
+    margin-top: 30px;
+}
+
+#password, #username{
+    color: var(--color4);
+    font-size: 22px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    height: 35px;
+    width: 90%;
+    background-color: var(--color1);
+    padding: 0 10px;
+}
+
+.btnSesion, .btnRegistrar{
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    outline: none;
+    border: none;
+    border-radius: 70px;
+    position: absolute;
+}
+
+.btnSesion{
+    color: var(--color4);
+    background-color: var(--color1);
+    border: 2px solid var(--color1);
+    left: 5%;
+    top: 65%;
+    transition: all 0.5s;
+}
+
+.btnSesion:hover{
+    color: var(--color1);
+    background-color: var(--color4);
+    border: 2px solid var(--color1);
+    transition: all 0.5s;
+}
+
+.btnRegistrar{
+    color: var(--color1);
+    background-color: var(--color4);
+    border: 2px solid var(--color1);
+    right: 5%;
+    top: 65%;
+    transition: all 0.5s;
+}
+
+.btnRegistrar:hover{
+    color: var(--color4);
+    background-color: var(--color1);
+    border: 2px solid var(--color1);
+    transition: all 0.5s;
+}
+
+.contenedor-register{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-register-tarjeta{
+    background-color: var(--color4);
+    width: 100vh;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0px 5px 15px 1px;
+}
+
+.titulo-register-h1{
+    color: var(--color1);
+    text-align: center;
+    font-size: 85px;
+    font-weight: 200;
+}
+
+.usuarioForm-register{
+    text-align: center;
+}
+
+.usuarioForm-register label{
+    color: var(--color1);
+    font-size: 35px;
+    display: block;
+    text-align: left;
+    margin-left: 150px;
+    margin-bottom: 15px;
+}
+
+.firstnameInput-register, .lastnameInput-register,
+.usernameInput-register, .passwordInput-register, .countryInput-register{
+    color: var(--color4);
+    font-size: 22px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    height: 35px;
+    width: 70%;
+    margin-bottom: 10px;
+    background-color: var(--color1);
+}
+
+.btnRegistrar-register{
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    outline: none;
+    border: none;
+    border-radius: 70px;
+    color: var(--color4);
+    background-color: var(--color1);
+    border: 2px solid var(--color1);
+    margin-top: 30px;
+}
+
+.btnRegistrar-register:hover{
+    color: var(--color1);
+    background-color: var(--color4);
+    border: 2px solid var(--color1);
+    transition: all 0.5s;
+}
+
+.volver{
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: var(--color1);
+    text-decoration: none;
+    border: 1px solid ;
+    padding: 15px;
+    border-radius: 10%;
+}
+
+#mensajeError-register{
+    color: var(--color3);
+    font-size: 20px;
+    text-decoration: underline;
+    display: none;
+}
+
+#mensajeError{
+    color: var(--color3);
+    font-size: 20px;
+    text-decoration: underline;
+    display: none;
+}
+
+.titulo-h1, .titulo-h2, .subtitulo, .pie, .springlogo{
+    animation: transparencia 4s linear;
+}
+
+.springlogo{
+    width: auto;
+    height: 40px;
+    vertical-align: middle;
+}
+@keyframes transparencia {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
