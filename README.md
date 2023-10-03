@@ -1,2 +1,3 @@
 # RegistroDeClientes
-Aplicación donde usuarios pueden guardar en una base de datos registros que contienen información sobre clientes. 
+:pencil:
+ClentManager es una aplicación donde usuarios pueden guardar en una base de datos registros que contienen información sobre clientes. 
