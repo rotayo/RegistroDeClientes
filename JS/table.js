@@ -4,7 +4,7 @@ const form = document.querySelector(".formulario-clientes");
 
 if(token == null){
     localStorage.clear();
-    location.href="../index.html"
+    location.href="https://rotayo.github.io/RegistroDeClientes/"
 }else{
     cargarDatos();
 }
@@ -20,7 +20,7 @@ function cargarDatos(){
     .then(response => {
         if (!response.ok) {
             localStorage.clear();
-            location.href="../index.html"
+            location.href="https://rotayo.github.io/RegistroDeClientes/"
             throw new Error('Error de red o respuesta no válida');
         }
         return response.json();
