@@ -182,5 +182,5 @@ function eliminar(id){
 
 function salir(){
     localStorage.clear();
-    location.href="../index.html"
+    location.href="https://rotayo.github.io/RegistroDeClientes/"
 }
