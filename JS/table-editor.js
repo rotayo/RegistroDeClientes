@@ -70,7 +70,7 @@ function pantallaDeCarga(boolean) {
         contenido.innerHTML += `
             <div id="ventanaDeCarga">
                 <p>Cargando...</p>
-                <img src="img/loading.gif" class="loadingCircle">
+                <img src="../img/loading.gif" class="loadingCircle">
             </div>
             <style>
                 #ventanaDeCarga{
