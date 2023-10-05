@@ -1,6 +1,7 @@
 const token = localStorage.getItem("token");
 const tabla = document.querySelector(".tabla-contenido");
 const form = document.querySelector(".formulario-clientes");
+let contenidoAgregado = false;
 
 if(token == null){
     localStorage.clear();
@@ -11,6 +12,7 @@ if(token == null){
 
 function cargarDatos(){
     const url = "https://rotayoclentmanager.onrender.com/cred"//retorna los datos del usuario
+    pantallaDeCarga(true);
     fetch(url, {
         method: 'GET',
         headers: {
@@ -18,6 +20,7 @@ function cargarDatos(){
         }
     })
     .then(response => {
+        pantallaDeCarga(false);
         if (!response.ok) {
             localStorage.clear();
             location.href="https://rotayo.github.io/RegistroDeClientes/"
@@ -32,6 +35,9 @@ function cargarDatos(){
         document.querySelector(".titulo").innerHTML = "Registros de "+JSON.parse(localStorage.getItem("user")).firstname;
         // se obtienen los clientes del usuario guardado
         obtenerClientes();
+    }).catch(error =>{
+        pantallaDeCarga(false);
+        console.log(error);
     })
 }
 
@@ -49,6 +55,7 @@ function obtenerClientes(){
             "username": userData.username
         }
 
+        pantallaDeCarga(true);
         fetch(url, {
             method: 'POST',
             headers:{
@@ -58,6 +65,7 @@ function obtenerClientes(){
             body: JSON.stringify(user)
         })
         .then(response => {
+            pantallaDeCarga(false);
             if (!response.ok) {
                 throw new Error('Error de red o respuesta no válida');
             }
@@ -70,6 +78,7 @@ function obtenerClientes(){
             imprimirClientes();
         })
         .catch(error => {
+            pantallaDeCarga(false);
             console.error(error);
         });
     }
@@ -137,6 +146,8 @@ form.addEventListener('submit', e => {
         "phone": telefono
     }
 
+    pantallaDeCarga(true);
+
     fetch(url, {
         method: 'POST',
         headers: {
@@ -146,6 +157,7 @@ form.addEventListener('submit', e => {
         body: JSON.stringify(cliente)
     })
     .then(response =>{
+        pantallaDeCarga(false);
         if(!response.ok){
             throw new Error("Error de red o respuesta no valida");
         }
@@ -158,11 +170,16 @@ form.addEventListener('submit', e => {
         document.querySelector(".lastname").value = "";
         document.querySelector(".email").value = "";
         document.querySelector(".phone").value = "";
-    })
+    }).catch(error => {
+        pantallaDeCarga(false);
+        console.log(error);
+    });
 });
 
 function eliminar(id){
     const url = "https://rotayoclentmanager.onrender.com/cliente/"+id; //Eliminar un cliente de la base de datos
+
+    pantallaDeCarga(true);
 
     fetch(url, {
         method: 'DELETE',
@@ -171,16 +188,65 @@ function eliminar(id){
         }
     })
     .then(response => {
+        pantallaDeCarga(false);
         if(!response.ok){
             throw new Error("Error de red o respuesta no valida");
         }
     })
     .then(() =>{
         obtenerClientes();
+    }).catch(error => {
+        pantallaDeCarga(false);
+        console.log(error);
     });
 }
 
 function salir(){
     localStorage.clear();
     location.href="https://rotayo.github.io/RegistroDeClientes/"
+}
+
+function pantallaDeCarga(boolean) {
+    if(!contenidoAgregado){
+        let contenido = document.querySelector(".contenedor-dinamico");
+        contenido.innerHTML += `
+            <div id="ventanaDeCarga">
+                <p>Cargando...</p>
+                <img src="img/loading.gif" class="loadingCircle">
+            </div>
+            <style>
+                #ventanaDeCarga{
+                    display: none;
+                    text-align: center;
+                    color: var(--color4);
+                    height: 170px;
+                    width: 400px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    background-color: var(--color1);
+                    box-shadow: 0px 0px 0px 100vh rgba(0, 0, 0, 0.5);
+                    z-index: 1000;
+                    transform: translate(-50%, -50%);
+                }
+                .loadingCircle{
+                    width: auto;
+                    height: 70px;
+                }
+            </style>
+        `
+        contenidoAgregado = true;
+    }
+    
+
+    let cuerpo = document.getElementById("cuerpo");
+    let ventana = document.getElementById("ventanaDeCarga");
+
+    if(boolean){
+        cuerpo.style.pointerEvents = 'none';
+        ventana.style.display = 'inline-block';
+    } else{
+        cuerpo.style.pointerEvents = 'all';
+        ventana.style.display = 'none';
+    }
 }

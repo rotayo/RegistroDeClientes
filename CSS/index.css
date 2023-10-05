@@ -256,6 +256,7 @@ body{
     height: 40px;
     vertical-align: middle;
 }
+
 @keyframes transparencia {
     0%{
         opacity: 0;

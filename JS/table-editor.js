@@ -1,5 +1,6 @@
 const contenido = document.querySelector(".contenedor-table-editar");
 const formEditor = document.querySelector(".formulario-editar-clientes");
+let contenidoAgregado = false;
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -41,6 +42,8 @@ function editar(id, nombre, apellido, correo, telefono){
         "phone": telefono
     }
 
+    pantallaDeCarga(true);
+
     fetch(url, {
         method: "PUT",
         headers: {
@@ -50,9 +53,56 @@ function editar(id, nombre, apellido, correo, telefono){
         body: JSON.stringify(datos)
     })
     .then(response =>{
+        pantallaDeCarga(false);
         if(!response.ok){
             throw new Error("Error de red o respuesta no valida")
         }
         return response;
+    }).catch(error =>{
+        pantallaDeCarga(false);
+        console.log(error);
     })
-};
+}
+
+function pantallaDeCarga(boolean) {
+    if(!contenidoAgregado){
+        let contenido = document.querySelector(".contenedor-dinamico");
+        contenido.innerHTML += `
+            <div id="ventanaDeCarga">
+                <p>Cargando...</p>
+                <img src="img/loading.gif" class="loadingCircle">
+            </div>
+            <style>
+                #ventanaDeCarga{
+                    display: none;
+                    text-align: center;
+                    color: var(--color4);
+                    height: 170px;
+                    width: 400px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    background-color: var(--color1);
+                    box-shadow: 0px 0px 0px 100vh rgba(0, 0, 0, 0.5);
+                    z-index: 1000;
+                    transform: translate(-50%, -50%);
+                }
+                .loadingCircle{
+                    width: auto;
+                    height: 70px;
+                }
+            </style>
+        `
+        contenidoAgregado = true;
+    }
+    let cuerpo = document.getElementById("cuerpo");
+    let ventana = document.getElementById("ventanaDeCarga");
+
+    if(boolean){
+        cuerpo.style.pointerEvents = 'none';
+        ventana.style.display = 'inline-block';
+    } else{
+        cuerpo.style.pointerEvents = 'all';
+        ventana.style.display = 'none';
+    }
+}
