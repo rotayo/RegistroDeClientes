@@ -1,11 +1,6 @@
 const form = document.querySelector(".usuarioForm-register");
 let contenidoAgregado = false;
 
-form.addEventListener('submit', e =>{
-    e.preventDefault();
-    register();
-})
-
 function register(){
     const url = "https://rotayoclentmanager.onrender.com/auth/register"; //Registra usuario y devuelve token
 
@@ -52,6 +47,11 @@ function register(){
             });
         }
 }
+
+form.addEventListener('submit', e =>{
+    e.preventDefault();
+    register();
+});
 
 function pantallaDeCarga(boolean) {
     if(!contenidoAgregado){
