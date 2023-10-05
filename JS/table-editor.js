@@ -22,7 +22,7 @@ formEditor.addEventListener('submit', e => {
 })
 
 function editar(id, nombre, apellido, correo, telefono){
-    const url = "http://localhost:8080/cliente/"+id;
+    const url = "https://rotayoclentmanager.onrender.com/cliente/"+id;
     let userData = JSON.parse(localStorage.getItem("user"));
 
     let datos = {

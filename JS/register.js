@@ -6,7 +6,7 @@ form.addEventListener('submit', e =>{
 })
 
 function register(){
-    const url = "http://localhost:8080/auth/register"; //Registra usuario y devuelve token
+    const url = "https://rotayoclentmanager.onrender.com/auth/register"; //Registra usuario y devuelve token
 
     let firstname = document.querySelector(".firstnameInput-register").value.trim();
     let lastname = document.querySelector(".lastnameInput-register").value.trim();
@@ -36,7 +36,7 @@ function register(){
                 
             }).then(response => {
                 if(response.ok){
-                    location.href="../index.html"
+                    location.href="https://rotayo.github.io/RegistroDeClientes/"
                 }else{
                     let error = document.getElementById("mensajeError-register");
                     error.style.display = 'block';

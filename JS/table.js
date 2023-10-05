@@ -10,7 +10,7 @@ if(token == null){
 }
 
 function cargarDatos(){
-    const url = "http://localhost:8080/cred"//retorna los datos del usuario
+    const url = "https://rotayoclentmanager.onrender.com/cred"//retorna los datos del usuario
     fetch(url, {
         method: 'GET',
         headers: {
@@ -36,7 +36,7 @@ function cargarDatos(){
 }
 
 function obtenerClientes(){
-    const url = "http://localhost:8080/cliente/obtener"; //Devuelve los clientes del Usuario en sesion
+    const url = "https://rotayoclentmanager.onrender.com/cliente/obtener"; //Devuelve los clientes del Usuario en sesion
     let userData = JSON.parse(localStorage.getItem("user"));
     if(userData){
         let user = {
@@ -112,7 +112,7 @@ function imprimirClientes(){
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    const url = "http://localhost:8080/cliente" //Agrega un cliente a la base de datos 
+    const url = "https://rotayoclentmanager.onrender.com/cliente" //Agrega un cliente a la base de datos 
 
     let userData = JSON.parse(localStorage.getItem("user"));
 
@@ -162,7 +162,7 @@ form.addEventListener('submit', e => {
 });
 
 function eliminar(id){
-    const url = "http://localhost:8080/cliente/"+id; //Eliminar un cliente de la base de datos
+    const url = "https://rotayoclentmanager.onrender.com/cliente/"+id; //Eliminar un cliente de la base de datos
 
     fetch(url, {
         method: 'DELETE',
