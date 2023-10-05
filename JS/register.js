@@ -15,11 +15,11 @@ function register(){
     let password = document.querySelector(".passwordInput-register").value.trim();
     let country = document.querySelector(".countryInput-register").value.trim();
 
-    if(firstname !== "" 
-        && lastname !== ""
-        && username !== ""
-        && password !== ""
-        && country !== ""){
+    if(firstname != "" 
+        && lastname != ""
+        && username != ""
+        && password != ""
+        && country != ""){
             var user = {
                 "username": username,
                 "password": password,
