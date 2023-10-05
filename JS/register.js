@@ -40,6 +40,7 @@ function register(){
             }).then(response => {
                 pantallaDeCarga(false);
                 if(response.ok){
+                    alert("Cuenta creada con exito");
                     location.href="https://rotayo.github.io/RegistroDeClientes/"
                 }else{
                     let error = document.getElementById("mensajeError-register");
