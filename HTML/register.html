@@ -12,6 +12,7 @@
         <div class="contenedor-register">
             <div class="contenedor-register-tarjeta">
                 <h1 class="titulo-register-h1">Regístrate</h1>
+                <p id="mensajeError-register">El correo ingresado ya está registrado</p>
                 <form class="usuarioForm-register" method="post">
                     <label for="firstname">Nombre:</label>
                     <input type="text" class="firstnameInput-register" name="firstname" required><br>
@@ -28,7 +29,6 @@
                     <label for="country">País:</label>
                     <input type="country" class="countryInput-register" name="country" required><br>
                     
-                    <p id="mensajeError-register">El correo ingresado ya está registrado</p>
                     <input type="submit" class="btnRegistrar-register" value="Registrarse">
                     <!-- <button onclick="register()"class="btnRegistrar-register">Registrarse</button> -->
                 </form>
