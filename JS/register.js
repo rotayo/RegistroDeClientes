@@ -36,7 +36,7 @@ function register(){
                 pantallaDeCarga(false);
                 if(response.ok){
                     alert("Cuenta creada con exito");
-                    location.href="https://rotayo.github.io/RegistroDeClientes/"
+                    location.href="https://clentmanagerweb.onrender.com"
                 }else{
                     let error = document.getElementById("mensajeError-register");
                     error.style.display = 'block';

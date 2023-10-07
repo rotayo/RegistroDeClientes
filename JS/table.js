@@ -5,7 +5,7 @@ let contenidoAgregado = false;
 
 if(token == null){
     localStorage.clear();
-    location.href="https://rotayo.github.io/RegistroDeClientes/"
+    location.href="https://clentmanagerweb.onrender.com"
 }else{
     cargarDatos();
 }
@@ -23,7 +23,7 @@ function cargarDatos(){
         pantallaDeCarga(false);
         if (!response.ok) {
             localStorage.clear();
-            location.href="https://rotayo.github.io/RegistroDeClientes/"
+            location.href="https://clentmanagerweb.onrender.com"
             throw new Error('Error de red o respuesta no válida');
         }
         return response.json();
@@ -203,7 +203,7 @@ function eliminar(id){
 
 function salir(){
     localStorage.clear();
-    location.href="https://rotayo.github.io/RegistroDeClientes/"
+    location.href="https://clentmanagerweb.onrender.com"
 }
 
 function pantallaDeCarga(boolean) {
